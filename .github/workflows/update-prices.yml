@@ -2,8 +2,11 @@ name: Actualizar precios Airbnb
 
 on:
   schedule:
-    - cron: '0 6 1 * *'  # Primer día de cada mes a las 6:00 AM
-  workflow_dispatch:       # También permite ejecutarlo manualmente
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   actualizar:
